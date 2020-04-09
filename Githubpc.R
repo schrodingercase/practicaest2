@@ -13,7 +13,7 @@ coronavirus = coronavirus[,c(2:5)]
 ###Cambiando los nombres
 names(coronavirus)
 
-new_names = c("Pa?ses", "Casos", "Muertes", "Recuperados")
+new_names = c("Paises", "Casos", "Muertes", "Recuperados")
 
 names(coronavirus) = new_names
 names (coronavirus)
@@ -23,11 +23,11 @@ names (coronavirus)
 coronavirus = coronavirus[-c(229:230),]
 View(coronavirus)
 
-###Algo m?s de limpieza para el valor ????"
+###Algo m?s de limpieza para el valor â€“
 
 library(dplyr)
 coronavirus = coronavirus %>% 
-  mutate(Recuperados = replace(Recuperados, Recuperados == '????"', NA))
+  mutate(Recuperados = replace(Recuperados, Recuperados == 'â€“', NA))
 
 View(coronavirus)
 
