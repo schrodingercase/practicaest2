@@ -30,3 +30,7 @@ coronavirus = coronavirus %>%
   mutate(Recuperados = replace(Recuperados, Recuperados == '????"', NA))
 
 View(coronavirus)
+
+###Análisis
+
+str(coronavirus)
